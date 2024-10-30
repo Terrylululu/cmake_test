@@ -1,6 +1,2 @@
-# 查找当前目录下的所有源文件
-# 并将名称保存到 DIR_LIB_SRCS 变量
-aux_source_directory(. DIR_LIB_SRCS)
-
-# 指定生成 MathFunctions 链接库
-add_library (MathFunctions ${DIR_LIB_SRCS})
+aux_source_directory(. libfile)#将所有的文件放进libfile 中
+add_library(mathlib ${libfile})#生成lib  库文件，libfile 被引用要加${}
